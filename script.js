@@ -1,25 +1,7 @@
-function promptInteger(message) {
-      while (true) {
-        let input = prompt(message);
-        if (input === null) {          
-          return null;
-        }
-        input = input.trim();
-        if (input === "") {
-          alert("Input cannot be empty. Please enter a valid integer.");
-          continue;
-        }
-        let num = Number(input);
-        if (!Number.isNaN(num) && Number.isInteger(num) && num > 0) {
-          return num;
-        }
-        alert("Please enter a valid positive integer.");
-        
-      }
-    }
+
 
     function createTable() {
-      const rn = promptInteger("Input number of rows");
+      const rn = promptInteger("Input number of rows" );
       if (rn === null) {
         return;  
       }
@@ -37,14 +19,34 @@ function promptInteger(message) {
         for (let j = 0; j < cn; j++) {
           if (i === 0) {
             const th = document.createElement('th');
-            th.textContent = `Row-${i} Column-${j}`;
+            th.textContent = `Row-${i} Col-${j}`;
             tr.appendChild(th);
           } else {
             const td = document.createElement('td');
-            td.textContent = `Row-${i} Column-${j}`;
+            td.textContent = `Row-${i} Col-${j}`;
             tr.appendChild(td);
           }
         }
         table.appendChild(tr);
+      }
+    }
+
+function promptInteger(message) {
+      while (true) {
+        let input = prompt(message);
+        if (input === null) {          
+          return null;
+        }
+        input = input.trim();
+        if (input === "") {
+          alert("Input cannot be empty. Please enter a valid integer.");
+          continue;
+        }
+        let num = Number(input);
+        if (!Number.isNaN(num) && Number.isInteger(num) && num > 0) {
+          return num;
+        }
+        alert("Please enter a valid positive integer.");
+        
       }
     }
