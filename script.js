@@ -37,11 +37,11 @@ function promptInteger(message) {
         for (let j = 0; j < cn; j++) {
           if (i === 0) {
             const th = document.createElement('th');
-            th.textContent = `Row-${i} Col-${j}`;
+            th.textContent = `Row-${i} Column-${j}`;
             tr.appendChild(th);
           } else {
             const td = document.createElement('td');
-            td.textContent = `Row-${i} Col-${j}`;
+            td.textContent = `Row-${i} Column-${j}`;
             tr.appendChild(td);
           }
         }
